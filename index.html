@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="formTitle">Login</h2>
+        <!-- login form -->
+        <form id="loginForm">
+            <label for="loginEmail">Email</label>
+            <div class="input-container">
+                <i class="fa-regular fa-envelope icon"></i>
+                <input type="email" id="loginEmail" placeholder="Enter your Email" required>
+            </div>
+            <label for="loginPassword">Password</label>
+            <div class="input-container">
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" id="loginPassword" placeholder="Enter your Password" required>
+            </div>
+            <button type="button" onclick="handleLogin()">Login</button>
+            <p class="error" id="loginError"></p>
+            <p class="toggle">Don't have an account?
+                <span class="toggle-text" onclick="toggleForm('signup')">Sign up</span>
+            </p>
+        </form>
+
+        <!-- signup form -->
+        <form id="signupForm" style="display: none;">
+            <label for="signupUsername">Username</label>
+            <div class="input-container">
+                <i class="fa-regular fa-user icon"></i>
+                <input type="text" id="signupUsername" placeholder="Create Username" required>
+            </div>
+            <label for="signupEmail">Email</label>
+            <div class="input-container">
+                <i class="fa-regular fa-envelope icon"></i>
+                <input type="email" id="signupEmail" placeholder="Enter your Email" required>
+            </div>
+            <label for="signupPassword">Password</label>
+            <div class="input-container">
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" id="signupPassword" placeholder="Create Password" required>
+            </div>
+            <label for="reEnterSignupPassword">Confirm Password</label>
+            <div class="input-container">
+                <i class="fa-solid fa-lock icon"></i>
+                <input type="password" id="reEnterSignupPassword" placeholder="Re-enter your password" required>
+            </div>
+            <button type="button" onclick="handleSignup()">Sign Up</button>
+            <p class="error" id="signupError"></p>
+            <p class="toggle">Already have an account? 
+                <span class="toggle-text" onclick="toggleForm('login')">Login</span>
+            </p>
+        </form>
+    </div>
+    <!-- Notification Container -->
+    <div id="notification" class="notification hidden">
+        <span id="notificationMessage"></span>
+        <span class="close-btn" onclick="closeNotification()">×</span> 
+        <!-- &times; -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

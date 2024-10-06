@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(to bottom right, #38A2D7, #561139);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h2{
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+label{
+    display: flex;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+}
+
+input{
+    width: 88%;
+    padding: 10px 10px 10px 40px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+
+button:hover{
+    background-color: #0b5ed7;
+}
+
+.toggle{
+    margin-top: 20px;
+}
+
+
+.toggle-text {
+    color: #007BFF;
+    cursor: pointer;
+}
+  
+.toggle-text:hover {
+    text-decoration: underline;
+}
+
+.error{
+    color: red;
+    margin: 10px 0;
+}
+
+.success {
+    color: green; 
+}
+
+
+/* Notification Styling */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Green for success */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.notification.error {
+    background-color: #f44336; /* Red for error */
+}
+
+.hidden {
+    display: none;
+}
+
+.close-btn {
+    margin-left: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.notification.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
